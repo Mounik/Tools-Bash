@@ -2,15 +2,15 @@
 #!/bin/bash
 # Generate IP addresses from a given range.
 for ip in $(seq 1 254); do
- echo "172.16.10.${ip}" >> 172-16-10-hosts.txt
+  echo "172.16.10.${ip}" >> 172-16-10-hosts.txt
 done
 
 # Créer une liste d'adresse ip
 printf "10.1.0.%d\n" {1..254}
 
-# Liste de sous-domaines
- /usr/share/wordlists/amass/subdomains-top1mil-110000.txt
- /usr/share/wordlists/amass/bitquark_subdomains_top100K.txt
- 
+# Liste de sous-domaines présent dans kali
+/usr/share/wordlists/amass/subdomains-top1mil-110000.txt
+/usr/share/wordlists/amass/bitquark_subdomains_top100K.txt
+
 # Sur Github à l'aide de Google
 subdomain wordlist site:gist.github.com
